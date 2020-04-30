@@ -1,11 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 
 const Search = () => {
+    const submitForm = (e) => {
+        e.preventDefault();
+    }
     return (
         <div className='search'>
-            <h1>By country</h1>
-            <Link to='/all'>Worldwide</Link>
+            <h2>Search by country</h2>
+            <form onSubmit={submitForm}>
+                <input type="text" autoComplete='off' required placeholder='Enter country...' />
+                <button type='submit'><img src="/search.png" alt="search icon"/></button>
+            </form>
         </div>
     )
 }

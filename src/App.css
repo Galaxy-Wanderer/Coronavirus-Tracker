@@ -1,9 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: none;
 }
 body {
     background:linear-gradient(90deg,#162d57,#213961);
+    width: 75vw;
+    margin: auto;
+}
+header {
+    width: 75vw;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px solid #fafafa;
+    padding: 1rem;
+}
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: calc(1.5vw + 1.5rem);
+}
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.search {
+    padding-top: 3vw;
+}
+.search h2 {
+    text-align: center;
+}
+form {
+    margin: auto;
+    width: 50%;
+    position: relative;
+    margin-top: 3rem;
+}
+input {
+    border: none;
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    width: 100%;
+    color: black;
+}
+button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 1%;
+    top: 20%;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+}
+img {
+    width: 2rem;
+}
+input:valid ~ button {
+    display: block;
+}
+p {
+    border: 2px solid #fafafa;
+    padding: 1.5vw;
+    border-radius: 5px;
+    margin: 2vw auto;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+}
+i {
+    margin-right: 2vw;
+}
+span {
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 1000px) {
+    header, body {
+        width: 95vw;
+    }
+    form {
+        width: 70%;
+    }
 }

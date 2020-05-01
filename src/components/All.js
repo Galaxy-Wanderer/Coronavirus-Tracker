@@ -3,15 +3,25 @@ import React, { useEffect, useState } from 'react'
 const All = () => {
     const [cases, setCases] = useState();
     const [deaths, setDeaths] = useState()
-    const [recovered, setRecovered] = useState()
+    const [recovered, setRecovered] = useState();
+    function addCommas(nStr){
+        nStr += '';
+        const x = nStr.split('.');
+        let x1 = x[0];
+        const x2 = x.length > 1 ? '.' + x[1] : '';
+        const rgx = /(\d+)(\d{3})/;
+        while (rgx.test(x1)) {
+         x1 = x1.replace(rgx, '$1,$2');
+        }
+        return x1 + x2;
+    }
     useEffect(() => {
         const fetchData = async () => {
             const res = await fetch('https://coronavirus-19-api.herokuapp.com/all');
             const data = await res.json();
-            setCases(data.cases);
-            setDeaths(data.deaths);
-            setRecovered(data.recovered);
-            console.log(data.cases.toString().split(''));
+            setCases(addCommas(data.cases.toString()));
+            setDeaths(addCommas(data.deaths.toString()));
+            setRecovered(addCommas(data.recovered.toString()));
         }
         fetchData();
     }, []);

@@ -65,22 +65,32 @@ img {
 input:valid ~ button {
     display: block;
 }
+.all p {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+}
 p {
     border: 2px solid #fafafa;
     padding: 1.5vw;
     border-radius: 5px;
     margin: 2vw auto;
-    display: flex;
-    justify-content: space-between;
     width: 70%;
-    align-items: center;
 }
 i {
     margin-right: 2vw;
 }
+p {
+    font-size: calc(1vw + 1rem);
+}
 span {
+    width: 100%;
     display: flex;
+    font-size: calc(.5vw + .5rem);
     align-items: center;
+}
+.search span {
+    margin-top: 1vw;
 }
 @media screen and (max-width: 1000px) {
     header, body {

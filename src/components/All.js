@@ -27,9 +27,9 @@ const All = () => {
     }, []);
     return (
         <div className='all'>
-            <p><span><i className="fas fa-head-side-cough" style={{ color: 'orange', fontSize: '50px'}}></i>Cases</span><span>{cases}</span></p>
-            <p><span><i className="fas fa-skull-crossbones" style={{ color: 'red', fontSize: '50px' }}></i>Deaths</span><span>{deaths}</span></p>
-            <p><span><i className="fas fa-smile-beam" style={{ color: 'rgb(20, 255, 20)', fontSize: '50px' }}></i>Recovered</span><span>{recovered}</span></p>
+            <p><span><i className="fas fa-head-side-cough" style={{ color: 'orange', fontSize: 'calc(1.5vw + 1.5rem)'}}></i>Cases</span><span>{cases}</span></p>
+            <p><span><i className="fas fa-skull-crossbones" style={{ color: 'red', fontSize: 'calc(1.5vw + 1.5rem)' }}></i>Deaths</span><span>{deaths}</span></p>
+            <p><span><i className="fas fa-smile-beam" style={{ color: 'rgb(20, 255, 20)', fontSize: 'calc(1.5vw + 1.5rem)' }}></i>Recovered</span><span>{recovered}</span></p>
         </div>
     )
 }
